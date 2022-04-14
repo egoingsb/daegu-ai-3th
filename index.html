@@ -9,7 +9,6 @@
         background-color:powderblue;
       }
       h1 a{
-        color:green;
         text-decoration:none;
       }
       h1{
@@ -23,18 +22,12 @@
        if(this.value === '밤') {
          document.querySelector('body').style.backgroundColor='black';                      document.querySelector('body').style.color='white'; 
          this.value = '낮';                                    
-       } 아니라면 {
-         document.querySelector('body').style.backgroundColor='white';                      document.querySelector('body').style.color='black';                                이 버튼의 value를 밤으로 변경한다.       
+       } else {
+         document.querySelector('body').style.backgroundColor='white';                      document.querySelector('body').style.color='black';                                this.value = '밤'; 
        }
                                           
     ">
     
-    <input type="button" value="밤" onclick="
-      document.querySelector('body').style.backgroundColor='black';                       document.querySelector('body').style.color='white';    
-    ">
-    <input type="button" value="낮" onclick="
-      document.querySelector('body').style.backgroundColor='white';           document.querySelector('body').style.color='black';    
-    ">
     <h1><a href="index.html">WEB</a></h1>
     <ol>
       <li><a href="1.html">html</a></li>
