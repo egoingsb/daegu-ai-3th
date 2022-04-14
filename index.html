@@ -4,30 +4,43 @@
     <title>WEB!!</title>
     <meta charset="utf-8" />
     <style>
-      body{
-        color:red;
-        background-color:powderblue;
+      body {
+        color: red;
+        background-color: powderblue;
       }
-      h1 a{
-        text-decoration:none;
+      h1 a {
+        text-decoration: none;
       }
-      h1{
-        border-bottom:10px solid pink;
-        padding-bottom:20px;
+      h1 {
+        border-bottom: 10px solid pink;
+        padding-bottom: 20px;
       }
     </style>
   </head>
   <body>
-    <input type="button" value="밤" onclick="
+    <input
+      type="button"
+      value="밤"
+      onclick="
        if(this.value === '밤') {
-         document.querySelector('body').style.backgroundColor='black';                      document.querySelector('body').style.color='white'; 
+         document.querySelector('body').style.backgroundColor='black';                                                document.querySelector('body').style.color='white';
+         let as = document.querySelectorAll('a');
+         for(let i=0; i<as.length; i=i+1){
+           as[i].style.color='white';      
+         }
          this.value = '낮';                                    
        } else {
-         document.querySelector('body').style.backgroundColor='white';                      document.querySelector('body').style.color='black';                                this.value = '밤'; 
+         document.querySelector('body').style.backgroundColor='white';                                                document.querySelector('body').style.color='black';   
+         let as = document.querySelectorAll('a');
+         for(let i=0; i<as.length; i=i+1){
+           as[i].style.color='black';      
+         }
+         this.value = '밤'; 
        }
                                           
-    ">
-    
+    "
+    />
+
     <h1><a href="index.html">WEB</a></h1>
     <ol>
       <li><a href="1.html">html</a></li>
@@ -36,46 +49,59 @@
     </ol>
     <h2>Welcome</h2>
     Hello, WEB
-    
-    
-    <!-- * 카카오맵 - 지도퍼가기 -->
-<!-- 1. 지도 노드 -->
-<div id="daumRoughmapContainer1649758016887" class="root_daum_roughmap root_daum_roughmap_landing"></div>
 
-<!--
+    <!-- * 카카오맵 - 지도퍼가기 -->
+    <!-- 1. 지도 노드 -->
+    <div
+      id="daumRoughmapContainer1649758016887"
+      class="root_daum_roughmap root_daum_roughmap_landing"
+    ></div>
+
+    <!--
 	2. 설치 스크립트
 	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
 -->
-<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+    <script
+      charset="UTF-8"
+      class="daum_roughmap_loader_script"
+      src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
+    ></script>
 
-<!-- 3. 실행 스크립트 -->
-<script charset="UTF-8">
-	new daum.roughmap.Lander({
-		"timestamp" : "1649758016887",
-		"key" : "29tcz",
-		"mapWidth" : "640",
-		"mapHeight" : "360"
-	}).render();
-</script>
-    
+    <!-- 3. 실행 스크립트 -->
+    <script charset="UTF-8">
+      new daum.roughmap.Lander({
+        timestamp: "1649758016887",
+        key: "29tcz",
+        mapWidth: "640",
+        mapHeight: "360",
+      }).render();
+    </script>
+
     <div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
+    <script>
+      /**
+       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+      /*
     var disqus_config = function () {
     this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://agoni2kim.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      (function () {
+        // DON'T EDIT BELOW THIS LINE
+        var d = document,
+          s = d.createElement("script");
+        s.src = "https://agoni2kim.disqus.com/embed.js";
+        s.setAttribute("data-timestamp", +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript
+      >Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript"
+        >comments powered by Disqus.</a
+      ></noscript
+    >
   </body>
 </html>
