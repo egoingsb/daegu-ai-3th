@@ -18,6 +18,7 @@
     
     <input 
            type="text" 
-           onfocus="speechSynthesis.speak(new SpeechSynthesisUtterance('제목을 입력해주세요'));"            onchange="">
+           onchange="speechSynthesis.speak(new SpeechSynthesisUtterance(this.value));"
+    >
   </body>
 </html>
